@@ -38,37 +38,37 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.viewHolder
         holder.imageView.setImageResource(model.getPicture());
         holder.textView.setText(model.getText());
 
-        switch (position){
-            case 0:
-                holder.imageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(context, "Item one Image clicked.", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                holder.textView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(context, "Text of Item one Clicked.", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                break;
-            case 1:
-                holder.imageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(context, "Item two Image Clicked.", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                holder.textView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(context, "Text of Item Two Clicked.", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                break;
-            default:
-        }
+//        switch (position){
+//            case 0:
+//                holder.imageView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(context, "Item one Image clicked.", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//                holder.textView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(context, "Text of Item one Clicked.", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//                break;
+//            case 1:
+//                holder.imageView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(context, "Item two Image Clicked.", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//                holder.textView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(context, "Text of Item Two Clicked.", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+//                break;
+//            default:
+//        }
         
     }
 
