@@ -1,4 +1,4 @@
-package com.example.recyclerviewbynirala.Adapters;
+          package com.example.recyclerviewbynirala.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,6 +37,38 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.viewHolder
         RecipeModel model =list.get(position);
         holder.imageView.setImageResource(model.getPicture());
         holder.textView.setText(model.getText());
+
+        switch (position){
+            case 0:
+                holder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(context, "Item one Image clicked.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(context, "Text of Item one Clicked.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                break;
+            case 1:
+                holder.imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(context, "Item two Image Clicked.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                holder.textView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(context, "Text of Item Two Clicked.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                break;
+            default:
+        }
         
     }
 

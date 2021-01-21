@@ -1,6 +1,7 @@
-package com.example.recyclerviewbynirala;
+    package com.example.recyclerviewbynirala;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,8 +36,17 @@ public class MainActivity extends AppCompatActivity {
 
         RecipeAdapter adapter = new RecipeAdapter(list,this);
         recyclerView.setAdapter(adapter);
+//        VERTICAL RECYCLER VIEW AND LIST.
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(layoutManager);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+//        HORIZONTAL RECYCLER VIEW AND LIST
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+//        recyclerView.setLayoutManager(layoutManager);
+
+//        Grid Layout manager
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
     }
 }
